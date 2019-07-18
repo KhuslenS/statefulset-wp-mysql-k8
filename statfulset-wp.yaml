@@ -13,10 +13,10 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:4
+        image: wordpress
         ports:
         - name: http
-          containerPort: 80
+          containerPort: 8080
         # volumeMounts:
         # - name: wordpress-pvc
         #   mountPath: /usr/share/nginx/html
