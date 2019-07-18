@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: wordpress-lb
   labels:
+    app: wordpress
+    tier: wp
 spec:
   type: LoadBalancer
   selector:
@@ -11,8 +13,8 @@ spec:
 #    statefulset.kubernetes.io/pod-name: wordpress-2
 #    statefulset.kubernetes.io/pod-name: wordpress-3
 #    statefulset.kubernetes.io/pod-name: wordpress-4
-
+    app: wordpress
+    tier: wp
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+    - port: 80
+      targetPort: 80
