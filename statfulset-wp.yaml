@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
-  labels:
+  matchLabels:
     app: wordpress
     tier: wp
 spec:
