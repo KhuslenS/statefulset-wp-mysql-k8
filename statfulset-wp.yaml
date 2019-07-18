@@ -17,9 +17,9 @@ spec:
         ports:
         - name: http
           containerPort: 80
-        volumeMounts:
-        - name: wordpress-pvc
-          mountPath: /usr/share/nginx/html
+        # volumeMounts:
+        # - name: wordpress-pvc
+        #   mountPath: /usr/share/nginx/html
         env:
           - name: WORDPRESS_DB_HOST
             value: mysql
