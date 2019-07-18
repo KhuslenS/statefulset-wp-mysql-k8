@@ -31,3 +31,15 @@ spec:
             port: 3306
         ports:
         - containerPort: 3306
+                volumeMounts:
+        - name: wordpress-pvc
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: wordpress-pvc
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "wordpress"
+      resources:
+        requests:
+          storage: 1Gi
