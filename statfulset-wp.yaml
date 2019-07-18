@@ -31,12 +31,12 @@ spec:
                 name: mysecret
                 key: password
 
-  volumeClaimTemplates:
-  - metadata:
-      name: wordpress
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "wordpress"
-      resources:
-        requests:
-          storage: 1Gi
+      volumeClaimTemplates:
+      - metadata:
+          name: wordpress
+        spec:
+          accessModes: [ "ReadWriteOnce" ]
+          storageClassName: "wordpress"
+          resources:
+            requests:
+              storage: 1Gi
