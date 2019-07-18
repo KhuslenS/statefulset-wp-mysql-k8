@@ -1,8 +1,9 @@
 apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
-  app: wordpress
-  tier: wp
+  labels:
+    app: wordpress
+    tier: wp
 spec:
   serviceName: wordpress
   replicas: 1
